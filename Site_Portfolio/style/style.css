@@ -1,0 +1,340 @@
+/* ==== ОСНОВА (Mobile First) ==== */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 12px;
+}
+
+.skills,
+.projects {
+  display: grid;
+  gap: 12px;
+}
+
+.skill {
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project {
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Ссылки для проектов */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Эффект при наведении */
+.project-link:hover .project {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  background-color: #e6f7ff;
+  border-color: #1890ff;
+}
+
+/* Эффект при нажатии (активном состоянии) */
+.project-link:active .project {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  background-color: #d4edff;
+  border-color: #096dd9;
+}
+
+/* Изменение цвета текста при наведении */
+.project-link:hover .project strong {
+  color: #1890ff;
+}
+
+.project-link:hover .project p {
+  color: #666;
+}
+
+/* ==== ГАЛЕРЕЯ ==== */
+
+.gallery-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0 20px;
+}
+
+.gallery-scroll img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* Эффект увеличения при наведении */
+.gallery-scroll img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 1;
+  position: relative;
+}
+
+/* ==== МОДАЛЬНОЕ ОКНО ==== */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Затемненный фон */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.modal-close:hover {
+  color: #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.image-title {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 8px 8px;
+}
+
+/* ==== КНОПКА ТЕМЫ ==== */
+
+.theme-toggle {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background: #444;
+}
+
+/* ==== DARK MODE ==== */
+
+body.dark {
+  background: #1c1c1c;
+  color: #eee;
+}
+
+body.dark header {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+body.dark header p {
+  color: #ccc;
+}
+
+body.dark .skill,
+body.dark .project {
+  background: #2a2a2a;
+  color: #eee;
+  border-color: #444;
+}
+
+/* Темная тема: эффект при наведении */
+body.dark .project-link:hover .project {
+  background-color: #2a4365;
+  border-color: #4299e1;
+  box-shadow: 0 5px 15px rgba(66, 153, 225, 0.2);
+}
+
+/* Темная тема: эффект при нажатии */
+body.dark .project-link:active .project {
+  background-color: #1a365d;
+  border-color: #3182ce;
+  box-shadow: 0 3px 8px rgba(66, 153, 225, 0.3);
+}
+
+/* Темная тема: изменение цвета текста */
+body.dark .project-link:hover .project strong {
+  color: #63b3ed;
+}
+
+body.dark .project-link:hover .project p {
+  color: #cbd5e0;
+}
+
+body.dark footer {
+  background: #000;
+}
+
+body.dark .gallery-scroll img {
+  box-shadow: 0 4px 12px rgba(255,255,255,0.15);
+}
+
+body.dark .gallery-scroll img:hover {
+  box-shadow: 0 8px 20px rgba(255,255,255,0.25);
+}
+
+body.dark .theme-toggle {
+  background: #444;
+  color: #eee;
+}
+
+body.dark .theme-toggle:hover {
+  background: #666;
+}
+
+/* ==== FOOTER ==== */
+
+footer {
+  background: #111;
+  color: #eee;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  transition: background-color 0.3s;
+}
+
+/* ==== ДЕСКТОП ==== */
+
+@media (min-width: 700px) {
+  h1 { font-size: 32px; }
+
+  .skills,
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gallery-scroll img {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .modal-content {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-scroll img {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .modal-content {
+    max-width: 70%;
+  }
+}

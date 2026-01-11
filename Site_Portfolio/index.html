@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио — Валентина Иванова</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+
+  <header>
+    <img src="style/photo/me.jpg" alt="Фото Валентины" class="profile-photo" />
+    <h1>Валентина Иванова</h1>
+    <p>Студентка СПбГУПТД | Веб-дизайн | 3D | Digital Art</p>
+  </header>
+
+  <button class="theme-toggle" id="themeBtn">Переключить тему</button>
+
+  <section>
+    <h2>О себе</h2>
+    <p>
+      Я творческая девушка, увлечённая веб-дизайном, иллюстрацией и 3D-моделированием. 
+      Изучаю интерфейсы, люблю создавать необычные образы, работаю в Blender и рисую фанарты.
+      Развиваюсь в цифровом искусстве и веду свой Telegram-канал.
+    </p>
+  </section>
+
+  <section>
+    <h2>Навыки</h2>
+    <div class="skills">
+      <div class="skill">Digital Art</div>
+      <div class="skill">3D Blender</div>
+      <div class="skill">HTML / CSS / JavaScript</div>
+      <div class="skill">Figma / UI-дизайн</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Образование</h2>
+    <p>СПбГУПТД — Прикладная информатика в дизайне</p>
+  </section>
+
+  <section>
+    <h2>Проекты</h2>
+    <div class="projects">
+      <a href="https://vallusha-ivanova.github.io/PROMO/" class="project-link" target="_blank">
+        <div class="project">
+          <strong>Вторая жизнь одежды</strong>
+          <p>Сервис для поиска пунктов переработки одежды в Санкт-Петербурге.</p>
+        </div>
+      </a>
+      <a href="https://t.me/windfromvavilon" class="project-link" target="_blank">
+        <div class="project">
+          <strong>Fanart & Cosplay Channel</strong>
+          <p>Творческий Telegram-канал с фанартами по новелле «Благословение небожителей».</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Галерея</h2>
+    <div class="gallery-scroll">
+      <img src="style/photo/draw2.jpg" alt="Арт работа 1" data-full="style/photo/draw2.jpg" />
+      <img src="style/photo/draw3.jpg" alt="Арт работа 2" data-full="style/photo/draw3.jpg" />
+      <img src="style/photo/draw4.jpg" alt="Арт работа 3" data-full="style/photo/draw4.jpg" />
+      <img src="style/photo/draw5.jpg" alt="Арт работа 4" data-full="style/photo/draw5.jpg" />
+      <img src="style/photo/draw6.jpg" alt="Арт работа 5" data-full="style/photo/draw6.jpg" />
+      <img src="style/photo/draw7.jpg" alt="Арт работа 6" data-full="style/photo/draw7.jpg" />
+      <img src="style/photo/draw8.jpg" alt="Арт работа 7" data-full="style/photo/draw8.jpg" />
+      <img src="style/photo/draw9.jpg" alt="Арт работа 8" data-full="style/photo/draw9.jpg" />
+    </div>
+  </section>
+
+  <section>
+    <h2>Контакты</h2>
+    <p>Email: example@mail.ru</p>
+    <p>Telegram: @windfromvavilon</p>
+  </section>
+
+  <!-- Модальное окно для просмотра изображений -->
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <img id="modalImage" src="" alt="Увеличенное изображение">
+      <div class="image-title" id="imageTitle"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Использованная нейросеть: ChatGPT</p>
+    <p>Время выполнения: ~20 минут</p>
+    <p>JavaScript функционал: переключение темы, просмотр изображений</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

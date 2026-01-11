@@ -1,0 +1,139 @@
+/* ==== ОСНОВА (Mobile First) ==== */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #222;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 12px;
+}
+
+.skills,
+.projects {
+  display: grid;
+  gap: 12px;
+}
+
+.skill,
+.project {
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+/* ==== ГАЛЕРЕЯ ==== */
+
+.gallery-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+}
+
+.gallery-scroll img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* ==== КНОПКА ТЕМЫ ==== */
+
+.theme-toggle {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==== DARK MODE ==== */
+
+body.dark {
+  background: #1c1c1c;
+  color: #eee;
+}
+
+body.dark header {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+body.dark .skill,
+body.dark .project {
+  background: #2a2a2a;
+  color: #eee;
+}
+
+body.dark footer {
+  background: #000;
+}
+
+body.dark .gallery-scroll img {
+  box-shadow: 0 2px 8px rgba(255,255,255,0.15);
+}
+
+/* ==== FOOTER ==== */
+
+footer {
+  background: #111;
+  color: #eee;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ==== ДЕСКТОП ==== */
+
+@media (min-width: 700px) {
+  h1 { font-size: 32px; }
+
+  .skills,
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
