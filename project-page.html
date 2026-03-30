@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект 1 — Valentina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=26">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-container">
+        <nav class="nav">
+            <a href="index.html" class="logo">Valentina</a>
+
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="menu">
+                <a href="index.html#about">Обо мне</a>
+                <a href="index.html#projects">Проекты</a>
+                <a href="index.html#contacts" class="btn-contacts">Контакты</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-image">
+                <!-- Здесь будет изображение проекта -->
+                <div class="project-hero-nav">
+                    <a href="#" class="hero-nav-arrow prev" id="prevProject" aria-label="Предыдущий проект">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 24L12 16L20 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hero-nav-arrow next" id="nextProject" aria-label="Следующий проект">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 24L20 16L12 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <h1 class="project-detail-title">E-Book</h1>
+
+            <div class="project-gallery-scroll">
+                <div class="gallery-scroll-track">
+                    <div class="gallery-item">
+                        <img src="небожители1.png" alt="Небожители 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="небожители2.png" alt="Небожители 2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-navigation">
+                <a href="index.html#projects" class="back-to-projects">← Вернуться к проектам</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section id="contacts" class="contacts-section">
+    <div class="container">
+        <h2 class="contacts-title">КОНТАКТЫ</h2>
+
+        <div class="contacts-content">
+            <p class="contacts-text">Готовы обсудить проект? Напишите мне!</p>
+            <a href="mailto:valentina@example.com" class="contact-email">valentina@example.com</a>
+
+            <div class="social-links">
+                <a href="#" class="social-link">Telegram</a>
+                <a href="#" class="social-link">Behance</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+
+        <div class="contacts-footer">
+            <p class="copyright">&copy; 2024 Valentina. Все права защищены.</p>
+        </div>
+    </div>
+</section>
+
+<button class="scroll-to-top" id="scrollToTop" aria-label="Наверх">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
