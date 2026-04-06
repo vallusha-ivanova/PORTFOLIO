@@ -7,14 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=26">
+    <link rel="stylesheet" href="style.css?v=146">
+    <script src="script.js?v=146" defer></script>
 </head>
 <body>
 
 <header class="header">
     <div class="container header-container">
         <nav class="nav">
-            <a href="#home" class="logo">Valentina</a>
+            <a href="index.html" class="logo">Valentina</a>
 
             <button class="menu-toggle" aria-label="Открыть меню">
                 <span></span>
@@ -38,7 +39,7 @@
     <section id="about" class="about-section">
         <div class="container">
             <h1 class="about-title">ОБО МНЕ</h1>
-            
+
             <div class="about-block">
                 <div class="about-photo">
                     <img src="img_valentina.png" alt="Валентина">
@@ -47,23 +48,21 @@
                     <div class="author-name">
                         <span class="name-last">Иванова</span>
                         <span class="name-first">Валентина</span>
+                        <img src="брызг.png" alt="" class="about-splash">
                     </div>
 
                     <div class="about-text">
                         <p class="lead-paragraph">
-                            Я — digital-художник и графический дизайнер, создаю
-                            растровые и векторные иллюстрации для цифровых и
-                            печатных проектов. В своих работах уделяю особое
-                            внимание атмосфере изображения и эмоциональной
-                            выразительности.
+                            Я — <span class="highlight-text">digital-художник</span> и <span class="highlight-text">графический дизайнер</span>, создаю
+                            визуальные решения, которые вдохновляют
                         </p>
                         <p>
-                            Интересуюсь разработкой визуальных концепций,
-                            книжной иллюстрацией и созданием авторских
-                            художественных проектов.
+                            Специализируюсь на разработке фирменного стиля, иллюстраций
+                            и веб-дизайна. Каждый проект — это уникальная история,
+                            рассказанная через визуальные образы
                         </p>
                         <p class="collab-text">
-                            Открыта к сотрудничеству и интересным проектам
+                            Открыта к сотрудничеству и новым проектам!
                         </p>
                     </div>
 
@@ -76,70 +75,78 @@
     </section>
     
     <section class="about-texture-section">
-        <div class="about-bg-texture">
-            <img src="фон с текстурой_1.png" alt="Текстура фона">
-            <h2 class="skills-title">ОСНОВНЫЕ НАВЫКИ</h2>
-            <div class="special-skills-image">
-                <img src="Special Skills.png" alt="Special Skills">
+        <div class="skills-wrapper">
+            <div class="skills-bg-texture">
+                <img src="фон с текстурой_1.png" alt="Текстура фона">
             </div>
-            <div class="skills-icons">
-                <div class="skill-item">
-                    <img src="Photoshop.png" alt="Photoshop">
-                    <span class="skill-percent">90%</span>
+            <div class="skills-content">
+                <h2 class="skills-title">ОСНОВНЫЕ НАВЫКИ</h2>
+                <div class="special-skills-image">
+                    <img src="Special Skills.png" alt="Special Skills">
                 </div>
-                <div class="skill-item">
-                    <img src="Illustrator.png" alt="Illustrator">
-                    <span class="skill-percent">85%</span>
-                </div>
-                <div class="skill-item">
-                    <img src="After Effects.png" alt="After Effects">
-                    <span class="skill-percent">75%</span>
-                </div>
-                <div class="skill-item">
-                    <img src="InDesign.png" alt="InDesign">
-                    <span class="skill-percent">60%</span>
-                </div>
-                <div class="skill-item">
-                    <img src="Figma.png" alt="Figma">
-                    <span class="skill-percent">70%</span>
-                </div>
-                <div class="skill-item">
-                    <img src="Dreamweaver.png" alt="Dreamweaver">
-                    <span class="skill-percent">50%</span>
+                <div class="skills-icons">
+                    <div class="skill-item">
+                        <img src="Photoshop.png" alt="Photoshop">
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="Illustrator.png" alt="Illustrator">
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="After Effects.png" alt="After Effects">
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="InDesign.png" alt="InDesign">
+                        <span class="skill-percent">60%</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="Figma.png" alt="Figma">
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="Dreamweaver.png" alt="Dreamweaver">
+                        <span class="skill-percent">50%</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <section class="skills-columns-section">
+        <img src="брызг.png" alt="" class="skills-splash skills-splash-left">
+        <img src="брызг.png" alt="" class="skills-splash skills-splash-right">
         <div class="container">
-            <div class="skills-columns">
-                <div class="skills-column soft-skills">
-                    <h3 class="column-title">SOFT SKILLS</h3>
-                    <ul class="skills-list">
-                        <li>Коммуникабельность и умение работать в команде</li>
-                        <li>Внимательность к деталям и аккуратность</li>
-                        <li>Креативное мышление и творческий подход</li>
-                        <li>Умение работать в режиме многозадачности</li>
-                    </ul>
-                    <div class="education-block">
-                        <h3 class="education-title">ОБРАЗОВАНИЕ</h3>
-                        <div class="chibi-image-edu">
-                            <img src="чибик.png" alt="Chibi">
+            <div class="skills-columns-wrapper">
+                <div class="skills-columns">
+                    <div class="skills-column soft-skills">
+                        <h3 class="column-title">SOFT SKILLS</h3>
+                        <ul class="skills-list">
+                            <li>//Коммуникабельность и умение работать в команде</li>
+                            <li>//Внимательность к деталям и аккуратность</li>
+                            <li>//Креативное мышление и творческий подход</li>
+                            <li>//Умение работать в режиме многозадачности</li>
+                        </ul>
+                        <div class="education-block">
+                            <h3 class="education-title">ОБРАЗОВАНИЕ</h3>
+                            <div class="chibi-image-edu">
+                                <img src="чибик.png" alt="Chibi">
+                            </div>
+                            <p class="education-text">
+                                В&nbsp;<span class="education-year">2026</span> году закончила университет СПбГУПТД по&nbsp;направлению «Прикладная информатика в&nbsp;дизайне»
+                            </p>
                         </div>
-                        <p class="education-text">
-                            В 2026 году закончила университет СПбГУПТД по направлению "Прикладная информатика в дизайне"
-                        </p>
                     </div>
-                </div>
-                <div class="skills-column hard-skills">
-                    <h3 class="column-title">HARD SKILLS</h3>
-                    <ul class="skills-list">
-                        <li>Разработка графического дизайна и иллюстраций</li>
-                        <li>Работа с растровой и векторной графикой</li>
-                        <li>Создание макетов для печати и веба</li>
-                        <li>Анимация и моушн-дизайн</li>
-                    </ul>
+                    <div class="skills-column hard-skills">
+                        <h3 class="column-title">HARD SKILLS</h3>
+                        <ul class="skills-list">
+                            <li>//Разработка графического дизайна и&nbsp;иллюстраций</li>
+                            <li>//Работа с&nbsp;растровой и&nbsp;векторной графикой</li>
+                            <li>//Создание макетов для печати и&nbsp;веба</li>
+                            <li>//Анимация и&nbsp;моушн-дизайн</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -162,34 +169,32 @@
 
             <div class="projects-carousel">
                 <div class="carousel-track">
-                    <a href="project-page.html" class="project-card-link">
+                    <a href="project-page-2.html" class="project-card-link">
                         <article class="project-card">
                             <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
+                                <img src="ножницы.png" alt="Re:Крой">
                             </div>
                             <div class="project-info">
                                 <h3 class="project-name">Re:Крой</h3>
-                                <p class="project-desc">// Плакат, онбординги
-к приложению</p>
+                                <p class="project-desc">// Плакат, онбординги&nbsp;к приложению</p>
                             </div>
                         </article>
                     </a>
-                    <a href="project-page.html" class="project-card-link">
+                    <a href="project-page-3.html" class="project-card-link">
                         <article class="project-card">
                             <div class="project-image">
-                                <img src="робот.png" alt="Робот">
+                                <img src="робот.png" alt="MiceE">
                             </div>
                             <div class="project-info">
                                 <h3 class="project-name">MiceE</h3>
-                                <p class="project-desc">// Плакат, онбординги
-к приложению</p>
+                                <p class="project-desc">// Плакат и брендовый персонаж</p>
                             </div>
                         </article>
                     </a>
                     <a href="project-page.html" class="project-card-link">
                         <article class="project-card">
                             <div class="project-image">
-                                <img src="бабочка.png" alt="Бабочка">
+                                <img src="бабочка.png" alt="E-Book">
                             </div>
                             <div class="project-info">
                                 <h3 class="project-name">E-Book</h3>
@@ -197,10 +202,10 @@
                             </div>
                         </article>
                     </a>
-                    <a href="project-page.html" class="project-card-link">
+                    <a href="project-page-4.html" class="project-card-link">
                         <article class="project-card">
                             <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
+                                <img src="ФОТО.png" alt="Escapism">
                             </div>
                             <div class="project-info">
                                 <h3 class="project-name">Escapism</h3>
@@ -208,139 +213,70 @@
                             </div>
                         </article>
                     </a>
-                    <a href="project-page.html" class="project-card-link">
+                    <a href="project-page-5.html" class="project-card-link">
                         <article class="project-card">
                             <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
+                                <img src="СИМФОНИЯ.png" alt="Труженики тыла">
                             </div>
                             <div class="project-info">
-                                <h3 class="project-name">Название проекта 5</h3>
-                                <p class="project-desc">Описание проекта</p>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="project-page.html" class="project-card-link">
-                        <article class="project-card">
-                            <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-name">Название проекта 6</h3>
-                                <p class="project-desc">Описание проекта</p>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="project-page.html" class="project-card-link">
-                        <article class="project-card">
-                            <div class="project-image">
-                                <img src="небожители1.png" alt="Небожители 1">
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-name">Небожители 1</h3>
-                                <p class="project-desc">// Описание проекта</p>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="project-page.html" class="project-card-link">
-                        <article class="project-card">
-                            <div class="project-image">
-                                <img src="небожители2.png" alt="Небожители 2">
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-name">Небожители 2</h3>
-                                <p class="project-desc">// Описание проекта</p>
-                            </div>
-                        </article>
-                    </a>
-                    <!-- Дубликат для бесконечной прокрутки -->
-                    <a href="project-page.html" class="project-card-link">
-                        <article class="project-card">
-                            <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-name">Название проекта 1</h3>
-                                <p class="project-desc">Описание проекта</p>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="project-page.html" class="project-card-link">
-                        <article class="project-card">
-                            <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-name">Название проекта 2</h3>
-                                <p class="project-desc">Описание проекта</p>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="project-page.html" class="project-card-link">
-                        <article class="project-card">
-                            <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-name">Название проекта 3</h3>
-                                <p class="project-desc">Описание проекта</p>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="project-page.html" class="project-card-link">
-                        <article class="project-card">
-                            <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-name">Название проекта 4</h3>
-                                <p class="project-desc">Описание проекта</p>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="project-page.html" class="project-card-link">
-                        <article class="project-card">
-                            <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-name">Название проекта 5</h3>
-                                <p class="project-desc">Описание проекта</p>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="project-page.html" class="project-card-link">
-                        <article class="project-card">
-                            <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-name">Название проекта 6</h3>
-                                <p class="project-desc">Описание проекта</p>
+                                <h3 class="project-name"><span class="word-gap">Труженики</span><span class="word-gap">тыла</span></h3>
+                                <p class="project-desc">// Плакат на выставку</p>
                             </div>
                         </article>
                     </a>
                     <!-- Дубликаты для бесконечной прокрутки -->
-                    <a href="project-page.html" class="project-card-link">
+                    <a href="project-page-2.html" class="project-card-link">
                         <article class="project-card">
                             <div class="project-image">
-                                <img src="ножницы.png" alt="Ножницы">
+                                <img src="ножницы.png" alt="Re:Крой">
                             </div>
                             <div class="project-info">
                                 <h3 class="project-name">Re:Крой</h3>
-                                <p class="project-desc">// Плакат, онбординги
-к приложению</p>
+                                <p class="project-desc">// Плакат, онбординги&nbsp;к приложению</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="project-page-3.html" class="project-card-link">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="робот.png" alt="MiceE">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-name">MiceE</h3>
+                                <p class="project-desc">// Плакат, онбординги&nbsp;к приложению</p>
                             </div>
                         </article>
                     </a>
                     <a href="project-page.html" class="project-card-link">
                         <article class="project-card">
                             <div class="project-image">
-                                <img src="робот.png" alt="Робот">
+                                <img src="бабочка.png" alt="E-Book">
                             </div>
                             <div class="project-info">
-                                <h3 class="project-name">MiceE</h3>
-                                <p class="project-desc">// Плакат, онбординги
-к приложению</p>
+                                <h3 class="project-name">E-Book</h3>
+                                <p class="project-desc">//Оформление электронной книги</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="project-page-5.html" class="project-card-link">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="СИМФОНИЯ.png" alt="Труженики тыла">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-name"><span class="word-gap">Труженики</span><span class="word-gap">тыла</span></h3>
+                                <p class="project-desc">// Плакат на выставку</p>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="project-page-4.html" class="project-card-link">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="ФОТО.png" alt="Escapism">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-name">Escapism</h3>
+                                <p class="project-desc">// Фотокнига</p>
                             </div>
                         </article>
                     </a>
@@ -349,27 +285,34 @@
         </div>
     </section>
 
-    <section id="contacts" class="contacts-section">
-        <div class="container">
-            <h2 class="contacts-title">КОНТАКТЫ</h2>
-            
-            <div class="contacts-content">
-                <p class="contacts-text">Готовы обсудить проект? Напишите мне!</p>
-                <a href="mailto:valentina@example.com" class="contact-email">valentina@example.com</a>
-                
-                <div class="social-links">
-                    <a href="#" class="social-link">Telegram</a>
-                    <a href="#" class="social-link">Behance</a>
-                    <a href="#" class="social-link">Instagram</a>
-                </div>
-            </div>
-            
-            <div class="contacts-footer">
-                <p class="copyright">&copy; 2024 Valentina. Все права защищены.</p>
-            </div>
-        </div>
-    </section>
 </main>
+
+<section id="contacts" class="contacts-section">
+    <img src="брызг.png" alt="" class="contacts-splash contacts-splash-right">
+    <img src="брызг.png" alt="" class="contacts-splash contacts-splash-left">
+    <div class="container">
+        <h2 class="contacts-title">КОНТАКТЫ</h2>
+        <p class="contacts-subtitle">Contacts</p>
+
+        <div class="contacts-links-row">
+            <a href="https://t.me/windfromvavilon" class="contact-link telegram-link">
+                <img src="telegram.svg" alt="" class="contact-icon-svg">
+                Telegram
+            </a>
+            <a href="https://vk.com/vallusha5601" class="contact-link vk-link">
+                <img src="vk.svg" alt="" class="contact-icon-svg">
+                VK
+            </a>
+            <a href="mailto:i.v.d@bk.ru" class="contact-link email-link">
+                Почта: i.v.d@bk.ru
+            </a>
+        </div>
+
+        <div class="contacts-footer">
+            <p class="copyright">&copy; 2024 Valentina. Все права защищены.</p>
+        </div>
+    </div>
+</section>
 
 <button class="scroll-to-top" id="scrollToTop" aria-label="Наверх">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -377,6 +320,24 @@
     </svg>
 </button>
 
-<script src="script.js"></script>
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Закрыть">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 10L10 30M10 10L30 30" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Предыдущее изображение">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 30L14 20L24 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" aria-label="Следующее изображение">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 30L26 20L16 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <img src="" alt="" id="lightbox-img">
+</div>
+
 </body>
 </html>

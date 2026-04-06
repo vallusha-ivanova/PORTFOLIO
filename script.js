@@ -52,12 +52,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Применяем анимацию к секциям
-    document.querySelectorAll('.about-content, .about-visual, .project-card, .contacts-content').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+    document.querySelectorAll('.about-content, .about-visual, .project-card, .contacts-content, .project-substrate, .project-texture-bg, .project-detail-title, .project-gallery-scroll, .project-navigation').forEach(el => {
+        if (el) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        }
     });
+
+    // Hero-секция видна сразу
+    const projectHero = document.querySelector('.project-hero');
+    if (projectHero) {
+        projectHero.style.opacity = '1';
+        projectHero.style.transform = 'none';
+    }
 
     // Кнопка "Наверх"
     const scrollToTopBtn = document.getElementById('scrollToTop');
@@ -86,47 +95,96 @@ document.addEventListener('DOMContentLoaded', function() {
         const projectPages = [
             'project-page.html',
             'project-page-2.html',
-            'project-page-3.html'
+            'project-page-3.html',
+            'project-page-4.html',
+            'project-page-5.html'
         ];
 
         // Определяем текущий проект
         const currentPage = window.location.pathname.split('/').pop() || 'project-page.html';
         const currentIndex = projectPages.indexOf(currentPage);
 
-        // Обновляем ссылки
-        if (currentIndex > 0) {
-            prevProjectBtn.href = projectPages[currentIndex - 1];
-        } else {
-            prevProjectBtn.style.opacity = '0.5';
-            prevProjectBtn.style.pointerEvents = 'none';
-        }
+        // Зацикленная навигация
+        const prevIndex = (currentIndex - 1 + projectPages.length) % projectPages.length;
+        const nextIndex = (currentIndex + 1) % projectPages.length;
 
-        if (currentIndex < projectPages.length - 1) {
-            nextProjectBtn.href = projectPages[currentIndex + 1];
-        } else {
-            nextProjectBtn.style.opacity = '0.5';
-            nextProjectBtn.style.pointerEvents = 'none';
-        }
+        prevProjectBtn.href = projectPages[prevIndex];
+        nextProjectBtn.href = projectPages[nextIndex];
 
-        // Обработка кликов
-        prevProjectBtn.addEventListener('click', function(e) {
-            if (this.style.pointerEvents === 'none') {
-                e.preventDefault();
+        // Управление с клавиатуры
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                window.location.href = projectPages[prevIndex];
+            } else if (e.key === 'ArrowRight') {
+                window.location.href = projectPages[nextIndex];
             }
         });
+    }
 
-        nextProjectBtn.addEventListener('click', function(e) {
-            if (this.style.pointerEvents === 'none') {
-                e.preventDefault();
+    // Lightbox для галереи
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
+    const galleryImages = document.querySelectorAll('.gallery-scroll-track .gallery-item img');
+
+    if (lightbox && lightboxImg && galleryImages.length > 0) {
+        let currentImageIndex = 0;
+
+        // Открытие lightbox при клике на изображение
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', function() {
+                currentImageIndex = index;
+                lightboxImg.src = this.src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Переключение изображений
+        function showImage(index) {
+            if (index < 0) index = galleryImages.length - 1;
+            if (index >= galleryImages.length) index = 0;
+            currentImageIndex = index;
+            lightboxImg.src = galleryImages[currentImageIndex].src;
+        }
+
+        function nextImage() {
+            showImage(currentImageIndex + 1);
+        }
+
+        function prevImage() {
+            showImage(currentImageIndex - 1);
+        }
+
+        // Закрытие lightbox
+        const closeLightbox = function() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', prevImage);
+        lightboxNext.addEventListener('click', nextImage);
+
+        // Закрытие по клику вне изображения
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
             }
         });
 
         // Управление с клавиатуры
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowLeft' && prevProjectBtn.style.pointerEvents !== 'none') {
-                window.location.href = prevProjectBtn.href;
-            } else if (e.key === 'ArrowRight' && nextProjectBtn.style.pointerEvents !== 'none') {
-                window.location.href = nextProjectBtn.href;
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
             }
         });
     }
